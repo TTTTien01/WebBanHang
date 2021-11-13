@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.125, 8.5" name="QLbangao">
+  <DataContextMoniker Name="/QLbangaoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="592373d7-4679-4058-b463-c259c46f4f7f" absoluteBounds="10.5, 1.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QLbangaoDataContext/BangSanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecb0d3ba-2946-406a-82df-9af791f84e51" absoluteBounds="10.515, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77d34058-14bc-4cee-91a4-c88b7cdbd291" absoluteBounds="8.375, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QLbangaoDataContext/ChiTietKhuyenMai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42f6b726-f859-4897-a343-654b636022f1" absoluteBounds="8.39, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51835a75-b681-4f1e-874e-17e62b383126" absoluteBounds="10.875, 3.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QLbangaoDataContext/ChiTietSp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad85c4d5-ea0b-4f31-b9f5-64e14d4f10d9" absoluteBounds="10.89, 4.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9de00888-3ef7-4c5e-943d-7f7861cdc1f5" absoluteBounds="10.875, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QLbangaoDataContext/ChitietTinTuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d391037e-51c8-42b4-82ce-9fcb0f38632d" absoluteBounds="10.89, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fec6ac08-cfff-4afc-8c2a-1dfde79205d8" absoluteBounds="10.25, 3.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLbangaoDataContext/DanhMucKhuyenmai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="146ad267-b2c9-46f3-84fc-50d0bb806401" absoluteBounds="10.265, 4.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a693061-c66b-4583-bd34-aadbc015b218" absoluteBounds="9.5, 3.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/QLbangaoDataContext/DanhmucSp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d84a28f2-f667-4794-a9a8-9eec8f03f881" absoluteBounds="9.515, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e087e925-f30a-4b21-8435-d8781a29b903" absoluteBounds="10.625, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLbangaoDataContext/DMTinTuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c2ea52f-8368-4108-a71d-57f0e9639a5a" absoluteBounds="10.64, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63a9eb64-4236-4c08-ab5a-21576e4b44eb" absoluteBounds="9.875, 0.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QLbangaoDataContext/GioHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58fbc5d5-3d1d-4d90-876d-a7f806fb3fbc" absoluteBounds="9.89, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d18a0b1e-344a-4cc9-8525-7b122d2a9a21" absoluteBounds="9.75, 4.375, 2, 3.1170068359375">
+      <DataClassMoniker Name="/QLbangaoDataContext/ThongTinDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0f78003-610b-401f-91db-f6e7c1acc067" absoluteBounds="9.765, 4.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="36bd360e-d97a-4c71-b9db-f834957d1242" absoluteBounds="9.5, 4.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QLbangaoDataContext/ThongTinLienHe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e8ff3df8-a3aa-44b7-8478-ea5c2aafc57b" absoluteBounds="9.515, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

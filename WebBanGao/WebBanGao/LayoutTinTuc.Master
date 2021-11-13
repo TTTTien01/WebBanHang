@@ -1,0 +1,317 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LayoutTinTuc.master.cs" Inherits="WebBanGao.LayoutTinTuc" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="Resource/Source/style.css">
+    <script src="Resource/Source/tintuc.js"></script>
+    <script src="Resource/Source/jsbanner.js"></script>
+    <title>Tin Tức - Gạo Sạch | Mua Bán Gạo Trực Tuyến</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="mar">
+        <marquee scrolldelay="0" scrollamount="5">
+            <p id="p1">CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI SIÊU THỊ GẠO &emsp; <b>GỌI ĐẶT HÀNG: </b> 0898.999.707</p>
+        </marquee>
+    </div>
+    <div class="text-center1">
+        <a href="../Pages/index.aspx"><img id="img1" src="../Resource/Images/logo.jpg" /></a>
+        <div class="anh"></div>
+        <p id="p2">Tinh Hoa Đất Trời</p>
+        <div class="search-wrapper">
+            <div class="input-holder">
+                <input type="text" class="search-input" placeholder="Type to search" />
+                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    function searchToggle(obj, evt) {
+        var container = $(obj).closest('.search-wrapper');
+
+        if (!container.hasClass('active')) {
+            container.addClass('active');
+            evt.preventDefault();
+        }
+        else if (container.hasClass('active') && $(obj).closest('.input-holder').length == 0) {
+            container.removeClass('active');
+            // clear input
+            container.find('.search-input').val('');
+            // clear and hide result container when we press close
+            container.find('.result-container').fadeOut(100, function () { $(this).empty(); });
+        }
+    }
+</script>
+    </div>
+    <div class="wrapper">
+        <nav class="menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="../Pages/index.aspx"><img src="../Resource/Images/l1.png" width="50px" height="50px" style="border-radius: 25px; position: relative; top: 21px;" /></a>
+                </li>
+                <li class="nav-item"><a href="../Pages/TinTuc.aspx">TIN TỨC</a>
+                    <ul class="sub-menu">
+                        <% for(int i=0 ; i<ListDanhmucTinTuc.Count ;i++){
+                                %>
+                        <li><a href="<%="../Pages/TinTuc.aspx?IdDanhMucTT="+ListDanhmucTinTuc[i].IdDanhMucTT %>"><%=ListDanhmucTinTuc[i].Ten %></a></li>
+                        <% }%>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="../Pages/KhuyenMai.aspx">KHUYẾN MÃI</a>
+                    <ul class="sub-menu">
+
+                        <% for (int a = 0; a < ListDanhMucKhuyenmai.Count; a++)
+                           {
+                                %>
+                        <li><a href="<%="../Pages/KhuyenMai.aspx?IdKhuyenMai="+ListDanhMucKhuyenmai[a].IdDanhMucKhuyenMai %>"><%=ListDanhMucKhuyenmai[a].TenDanhMuc %></a></li>
+                        <% }%>
+
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="../Pages/SanPham.aspx">SẢN PHẨM</a>
+                    <ul class="sub-menu">
+
+                        <% for(int a=0 ; a<ListDanhmucSp.Count ;a++){
+                                %>
+                        <li><a href="<%="../Pages/SanPham.aspx?IdIdDanhMucSanPham="+ListDanhmucSp[a].IdDanhMucSanPham  %>"><%=ListDanhmucSp[a].TenDanhMuc %></a></li>
+                        <% }%>
+
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="../Pages/LienHe.aspx">LIÊN HỆ</a></li>
+                <li class="nav-item"><a href="../Pages/GioHang.aspx">GIỎ HÀNG</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- dmục bài viết-->
+
+
+    <div id="dssk" >
+        <ul id="dropdown">
+            <br>
+            <div id="e">Danh Mục Bài Viết</div>
+            <br>
+            <li>
+                <a href="../Pages/GioiThieu.aspx">Giới thiệu</a>
+            </li>
+            <li>
+                <a href="../Pages/TinTuc.aspx">Tin tức </a>
+                <ul>
+                    <li><a href="../Pages/TinNganhGao.aspx">&#9679; Tin ngành gạo</a></li>
+                    <li><a href="../Pages/SucKhoe.aspx">&#9679; Sức khỏe</a></li>
+                    <li><a href="../Pages/LamDep.aspx">&#9679; Làm đẹp</a></li>
+                    <li><a href="../Pages/NongNghiep.aspx">&#9679; Tin tức nông nghiệp</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="../Pages/KhuyenMai.aspx">Khuyến mãi</a>
+                <ul>
+                    <li><a href="https://gaoanbinh.vn/khuyen-mai-mua-gao-nhan-qua-mien-phi-van-chuyen/">&#9679; 1</a></li>
+                    <li><a href="https://aan.vn/tin-thi-truong/khuyen-mai-bat-ngo-mua-3-tang-1/">&#9679; 2</a></li>
+                    <li><a href="http://nangsen.vn/khuyen-mai/thang-vang-sieu-khuyen-mai-2040.html">&#9679; 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Pages/SanPham.aspx">Sản phẩm hot</a>
+            </li>
+            <li>
+                <a href="../Pages/LienHe.aspx">Liên Hệ</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var menu = document.querySelectorAll("li");
+        for (var i = 0; i < menu.length; i++) {
+            menu[i].addEventListener("mouseover", function () {
+                var menucon = document.querySelectorAll('#dropdown  li  ul');
+                for (var j = 0; j < menucon.length; j++) {
+                    menucon[j].style.display = "none";
+                }
+                this.children[1].style.display = "block";
+            });
+        }
+    </script>
+    <!---->
+
+
+
+
+
+    <div class="timeline">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer" style="position:relative; right:0px">
+        <div class="container table">
+            <div class="col">
+                <h3>Bảng giá gạo <i style="     font-weight: normal;     font-size: 13px;     letter-spacing: 1px; ">(22/10/2021)</i></h3>
+                <table cellpadding="5" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td style="width: 20px;"></td>
+                            <td style="width:150px">Tấm thơm Đài Loan</td>
+                            <td>12,000₫</td>
+                            <td style="width:40px"></td>
+                            <td style="width:140px">Gạo nở thông dụng</td>
+                            <td> 12,500₫</td>
+                            <td style="width:20px"></td>
+                            <td>Gạo 64 chợ Đào</td>
+                            <td>13,000₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo nở 404</td>
+                            <td>12,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo Tấm Sữa</td>
+                            <td>13,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo 504 mới</td>
+                            <td>13,000₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo Tấm Trong</td>
+                            <td>13,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo bụi sữa</td>
+                            <td>13,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo tấm Sa Mơ</td>
+                            <td>13,500₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo Tấm</td>
+                            <td>16,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo hương lài</td>
+                            <td>14,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo 64 thơm dứa</td>
+                            <td>13,500₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo 504 cũ 1 năm</td>
+                            <td>14,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo lứt Omega</td>
+                            <td>15,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo thơm Thái</td>
+                            <td>14,500₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo tấm tài nguyên</td>
+                            <td>14,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo Thái gãy </td>
+                            <td>15,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo Sa mơ hạt nhỏ</td>
+                            <td>15,000₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo 504 cũ 2 năm</td>
+                            <td>15,000₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo lài sữa miên</td>
+                            <td>16,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo Đài Loan biển</td>
+                            <td>16,000₫</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Gạo nàng thơm chợ đào</td>
+                            <td>15,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo Hàm Châu hạt dài</td>
+                            <td>13,500₫</td>
+                            <td>&nbsp;</td>
+                            <td>Gạo Hàm Châu siêu mới</td>
+                            <td>14,000₫</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h3>Đăng ký</h3>
+                <form id="newsletter" method="post" action="#">
+                    <p>Đăng ký Email để nhận quà tặng:</p>
+                    <input type="email" id="newsletter_input" placeholder="Email " />
+                    <input type="submit" value="Gửi" />
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="desktop" style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #241d1f; padding-left: 70px">
+                <div class="content">
+                    <table cellpadding="1" cellspacing="1">
+                        <tbody>
+                            <tr>
+                                <td><strong>Đại Diện Tại Nam Định</strong></td>
+                                <td style="width:10px">&nbsp;</td>
+                                <td><strong>Đại Diện Tại Hà Nội</strong></td>
+                                <td style="width:10px">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td style="width:10px">&nbsp;</td>
+                                <td><strong>Đại Diện TP Hồ Chí Minh</strong></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="text-align:justify">Hải Cường - Hải Hậu - Nam Định<br /> ĐT/Fax: 02283 791 999</p>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>Số A5 Ngõ; 72 &nbsp;Phố Dịch Vọng&nbsp;<br /> ĐT/Fax: 024 38 616 999</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <p>Địa chỉ :195/59 Xô Viết Nghệ Tĩnh,, Phường 17, Quận Bình Thạnh, TP Hồ Chí Minh &nbsp;<br /> ĐT/Fax: 0225 3 558 123</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Resource/Source/jsbanner.js"></script>
+    <script>
+        var btnOpen = document.getElementById("openpopup");
+        var popup = document.getElementById("myPopup");
+
+        btnOpen.onclick = function () {
+            popup.classList.add("show");
+            setTimeout(function () {
+                popup.classList.add("fade");
+            }, 0);
+        }
+
+        //tìm btn có class [close-popup] bên trong popup
+        var btnClose = popup.querySelector(".close-popup");
+        btnClose.onclick = function () {
+            //xóa opacity trc
+            popup.classList.remove("fade");
+            //sau o,5s xóa display:none
+            setTimeout(function () {
+                popup.classList.remove("show");
+            }, 5000); //3000ms
+        }
+    </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1713 @@
+﻿
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+
+.mar {
+    background-color: #c7eed1;
+}
+
+.big {
+    display: inline-block;
+}
+
+.text-center1 {
+    height: 300px;
+    width: 100%;
+}
+
+.text-center1 #img1 {
+    position: relative;
+    left: 50px;
+    height: 300px;
+    width: 350px;
+    display: inline;
+}
+
+.anh {
+	
+	background-image: url('../Images/a8.jpg');
+	width: 1260px;
+	height: 300px;
+	left: 410px;
+	bottom: 300px;
+	z-index: -1;
+	display: block;
+	position: relative;
+	border-radius: 30px;
+	box-shadow: 0 0 20px 20px white inset;
+}
+
+#p2 {
+    text-align: center;
+    font-size: 57px;
+    color: #035547;
+    position: relative;
+    bottom: 500px;
+    left: 230px;
+    word-spacing: 10px;
+    letter-spacing: .1em;
+    text-shadow: -2px -1px 1px #111, 2px 2px 1px #363636;
+}
+
+#p3 {
+    font-family: Tahoma;
+    width: 450px;
+}
+/*========================Thanh tìm kiếm=================================*/
+.search-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:35%;
+    left:86%;
+    border-radius: 44%;
+}
+
+.search-wrapper .input-holder {    
+    height: 60px;
+    width:50px;
+    overflow: hidden;
+    background: rgba(255,255,255,0);
+    border-radius:10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.search-wrapper.active .input-holder {
+    width:350px;
+    border-radius: 50px;
+    background: #fff;
+    transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+.search-wrapper .input-holder .search-input {
+    width:100%;
+    height: 50px;
+    padding:0px 70px 0 20px;
+    opacity: 0;
+    position: absolute;
+    top:-3px;
+    left:0px;
+    background: transparent;
+    box-sizing: border-box;
+    border:none;
+    outline:none;
+    font-family:"Open Sans", Arial, Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: black;
+    transform: translate(0, 60px);
+    transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition-delay: 0.3s;
+}
+.search-wrapper.active .input-holder .search-input {
+    opacity: 1;
+    transform: translate(0, 10px);
+}
+.search-wrapper .input-holder .search-icon {
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:6px;
+    background: rgba(172, 218, 174, 1.0);
+    padding:0px;
+    outline:none;
+    position: relative;
+    z-index: 2;
+    float:right;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    top:-5px;
+}
+.search-wrapper.active .input-holder .search-icon {
+    width: 50px;
+    height:50px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.search-wrapper .input-holder .search-icon span {
+    width:22px;
+    height:22px;
+    display: inline-block;
+    vertical-align: middle;
+    position:relative;
+    transform: rotate(45deg);
+    transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+}
+.search-wrapper.active .input-holder .search-icon span {
+    transform: rotate(-45deg);
+}
+.search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
+    position: absolute; 
+    content:'';
+}
+.search-wrapper .input-holder .search-icon span::before {
+    width: 4px;
+    height: 11px;
+    left: 9px;
+    top: 18px;
+    border-radius: 2px;
+    background: #04813c;
+}
+.search-wrapper .input-holder .search-icon span::after {
+    width: 14px;
+    height: 14px;
+    left: 0px;
+    top: 0px;
+    border-radius: 16px;
+    border: 4px solid #028f09;
+}
+.search-wrapper .close {
+    position: absolute;
+    z-index: 1;
+    top:20px;
+    right:20px;
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+    transition-delay: 0.2s;
+}
+.search-wrapper.active .close {
+    right:-50px;
+    transform: rotate(45deg);
+    transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition-delay: 0.5s;
+}
+.search-wrapper .close::before, .search-wrapper .close::after {
+    position:absolute;
+    content:'';
+    background: #089203;
+    border-radius: 2px;
+}
+.search-wrapper .close::before {
+    width: 5px;
+    height: 25px;
+    left: 10px;
+    top: 0px;
+}
+.search-wrapper .close::after {
+    width: 25px;
+    height: 5px;
+    left: 0px;
+    top: 10px;
+}
+
+
+/*Ảnh chạy*/
+
+
+.slideshow-container {
+    width: 0px;
+    height: 400px;
+    text-align: center;
+    
+}
+
+.slideshow-container img {
+    width: 1700px;
+    height: 470px;
+    position: absolute;
+    top: 402px;
+
+}
+.dot {
+    position: relative;
+    bottom: 6px;
+    left: 50px;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 225px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(117, 114, 114, 0.705);
+    border-radius: 35%;
+}
+.active {
+    background-color: #717177;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*----- Phần menu -----*/
+
+.menu {
+    text-align: center;
+    margin: auto;
+    background: #4a9e57;
+    height: 60px;
+    margin-top: 10px;
+    text-decoration: none;
+    width:1700px;
+}
+
+.menu li {
+    margin: 0px;
+    font-family: 'Ek Mukta';
+}
+
+.menu a {
+    text-decoration: none;
+    /*Bỏ gạch chân ở thẻ a*/
+    color: #1a1818;
+}
+
+.menu li:hover>a,
+.menu {
+    color: #06462b;
+    border-radius: 5px;
+    text-decoration:none;
+}
+
+
+/*----- css cho phần menu cha -----*/
+
+.menu>ul>li {
+    display: inline-block;
+    position: relative;
+    left:-55px;
+    bottom: 25px;
+    font-size: 19px;
+    margin-left: 12px;
+}
+
+.menu>ul>li>a {
+    padding: 10px 60px;
+    display: inline-block;
+    color: white;
+}
+
+.menu>ul>li:not(:first-child):hover>a,
+.menu>ul>a {
+    background: #d5e9d5;
+}
+
+
+/*----css cho menu con----*/
+
+.menu li:hover .sub-menu {
+    z-index: 1;
+    opacity: 1;
+}
+
+.sub-menu {
+    width: 120%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: -1;
+    opacity: 0;
+    /*menu xổ xuống*/
+    background: #9aeeb3;
+    border-radius: 5px;
+}
+
+.sub-menu li {
+    display: block;
+    font-size: 16px;
+}
+
+.sub-menu li a {
+    padding: 10px 30px;
+    display: block;
+    text-align: left;
+}
+
+.sub-menu li a:hover,
+.sub-menu .current-item a {
+    background: #c7eed1;
+}
+
+.bang {
+    width: 100%;
+    margin-left: 350px;
+}
+
+.bang td {
+    width: 350px;
+    height: 50px;
+    text-align: justify;
+}
+
+.bang a {
+    text-decoration: none;
+}
+
+.bang td p {
+    display: inline;
+    padding: 20px;
+}
+
+
+/*Thiết kế sau bảng*/
+
+.thongtin {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: 100px 0 100px -468px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #9f9f9f;
+    font-size: 15px;
+}
+
+.package {
+    box-sizing: border-box;
+    width: 301px;
+    height: 380px;
+    border: 3px solid #e8e8e8;
+    border-radius: 7px;
+    padding: 24px;
+    text-align: center;
+    float: left;
+    -webkit-transition: margin-top 0.5s linear;
+    transition: margin-top 0.5s linear;
+    position: relative;
+    margin-right: 11px;
+}
+
+.package:hover {
+    /*hiệu ứng khi gê chuột*/
+    margin-top: -30px;
+    -webkit-transition: margin-top 0.3s linear;
+    transition: margin-top 0.3s linear;
+    cursor: pointer;
+}
+
+.brilliant {
+    border-color: #33c4b6;
+}
+
+
+/* Triangle */
+
+.brilliant::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 64px 64px 0 0;
+    border-color: #3bc6b8 transparent transparent transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.brilliant::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    color: white;
+    position: absolute;
+    left: 9px;
+    top: 6px;
+    text-shadow: 0 0 2px #37c5b6;
+    font-size: 1.4rem;
+}
+
+.test {
+    width: 500px;
+    height: 300px;
+    background-color: #56dd78;
+}
+
+/*   doanh muc sanpham    */
+
+#main {
+    padding: 5px 0px 30px 0px;
+}
+
+#main>li {
+    display: inline-block;
+    width: 350px;
+    margin-left: 100px;
+    margin-top: 50px;
+    vertical-align: top;
+}
+
+#main>li img {
+    float: left;
+    margin-right: 50px;
+    opacity: 0.7;
+}
+
+#main>li:hover img {
+    opacity: 1;
+    /*độ mờ*/
+    transform: scale(1.1);
+}
+
+#main>li h2 {
+    margin: 0px;
+    font-size: 20px;
+    color: #444444;
+    line-height: 25px;
+}
+
+#main>li:hover h2 {
+    color: #f7cf07;
+}
+
+#main>li p {
+    color: #444444;
+    margin: 0;
+    line-height: 30px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#body>div>.left {
+    float: left;
+    width: 220px;
+}
+
+#body>div>.right {
+    float: right;
+    width: 520px;
+}
+
+
+/*bảng giá gạo*/
+#footer {
+	background-image: url('../Images/footerbg.jpg');
+	background-repeat: round;
+	width: 1700px;
+	left: 0px;
+	bottom: -100px;
+	position: relative;
+	color: rgb(14, 13, 13);
+	font-weight: bold;
+}
+
+#footer>div:nth-child(1) {
+    padding-top: 15px;
+    padding-left: 115px;
+}
+
+#footer .col:nth-child(2) {
+    padding: 50px 30px;
+    position: absolute;
+    top: 50px;
+    left: 1175px;
+}
+
+#footer .col>h3 {
+    font-size: 20px;
+    line-height: 17px;
+    margin: 15px 0 10px 0;
+}
+
+#newsletter2 {
+    font-size: 16px;
+    color: #8eca2d;
+    text-transform: none;
+}
+
+#newsletter {
+    font-size: 17px;
+    color: #e0cd1a;
+    text-transform: none;
+    font-weight: bold;
+}
+
+#newsletter input[type="email"],
+#newsletter2 input[type="email"] {
+    padding: 6px 6px;
+    border: 1px solid #fff;
+    font-size: 15px;
+    width: 150px;
+}
+
+#newsletter input[type="submit"],
+#newsletter2 input[type="submit"] {
+    bordeR: 0;
+    outline: 0;
+    color: #034728;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #bdce23;
+}
+
+#newsletter2 input[type="email"] {
+    border: 1px solid #f0f0f0;
+    margin-left: 16px;
+}
+
+/*==============SẢN PHẨM======================*/
+.box-grid-products{
+    height: 1300px;
+    width: 900px;
+    margin: auto;
+    margin-left: 400px;
+}
+.grid-products {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    margin: 30px 10px;
+  }
+  
+  .product-image img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .product-image img:hover {
+    opacity: 0.5;
+  }
+  
+  .product-info {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .product-price {
+    font-size: 21px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.705);
+  }
+  
+  .product-name {
+    font-size: 20px;
+    padding: 1px 0;
+    color: rgba(0, 0, 0, 0.705);
+  }
+  /*==================CHI TIẾT SP===========================*/
+  .page-content {
+    margin-top: 30px;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  .nav-products a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+
+.img-zoom-product img {
+    margin: 100px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+    height: 600px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+  
+  input[type="checkbox"]:checked ~ label > img {
+    transform: scale(1.3);
+    cursor: zoom-out;
+  }
+  
+  .img-zoom-product {
+    width: 638px;
+    height: 638px;
+  }
+  
+  .container-product {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top:50px;
+   
+  }
+  
+  .product-shopping-cart {
+    width: 555px;
+    margin-left: 200px;
+    margin-top: 100px;
+  }
+  
+  .product-shopping-cart > span {
+    display: inline-block;
+    color: #c01926;
+    font-size: 24px;
+    padding: 15px 0;
+  }
+  
+  .product-shopping-cart > form > button {
+    width: 90%;
+    background-color: #069;
+    cursor: pointer;
+    transition: 1s all;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(top, rgb(226, 238, 175) 3%, rgb(188, 216, 77) 3%, rgb(144, 176, 38) 100%);
+
+  }
+  
+  .product-shopping-cart > form > button > span {
+    display: inline-block;
+    padding: 15px 0;
+    color: white;
+    background-image: -webkit-linear-gradient(top, rgb(226, 238, 175) 3%, rgb(188, 216, 77) 3%, rgb(144, 176, 38) 100%);
+
+  }
+  
+  .product-shopping-cart > form > button:hover,
+  button.form-submit:hover,
+  button.confirm-info:hover {
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+  }
+  
+  .product-benefits {
+    width: 90%;
+    margin-top: 10px;
+    height: 70px;
+    text-align: center;
+  }
+  
+  .product-benefits-item {
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.308);
+  }
+  
+  i.product-benefits-icon {
+    color: rgba(0, 0, 0, 0.308);
+    font-size: 45px;
+  }
+  
+  .shopping-cart-hr {
+    margin-top: 30px;
+    width: 90%;
+    border-top: 1px solid rgba(0, 0, 0, 0.075);
+  }
+  
+  .container-information {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .information {
+    margin-top: 120px;
+    width: 50%;
+  }
+  
+  .information button.open-info {
+    width: 97%;
+    font-size: 15px;
+    text-align: left;
+    padding: 20px 15px;
+    border: none;
+    border-top: 1px solid rgba(121, 117, 117, 0.267);
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .product-content {
+    padding: 10px 10px;
+    font-size: 14px;
+    line-height: 180%;
+    display: none;
+  }
+  
+  .product-content p {
+    padding: 3px 10px;
+  }
+  /*==============================================TIN TỨC=====================================*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+.timeline {
+    padding: 40px 0px;
+    width: 750px;
+    left: 450px;
+    top: 10px;
+    font-family: "Lato", sans-serif;
+    position: relative;
+    border: 1px solid #e7ebca;
+    box-shadow: 20px;
+    background-color: rgb(222, 248, 239);
+}
+
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 65px;
+        width: 3px;
+        height: calc(100% - 80px);
+        background: #c0392b;
+    }
+
+    .timeline .column {
+        margin: 20px 20px 20px 100px;
+    }
+
+        .timeline .column .title1 .fade h1 {
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.2);
+            font-family: serif;
+            letter-spacing: 3px;
+        }
+
+        .timeline .column .title1 h1:before {
+            content: "";
+            position: absolute;
+            left: 60px;
+            top: 60px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border: 3px solid #c0392b;
+        }
+
+        .timeline .column .show h2 {
+            margin-bottom: -100px;
+            font-size: 33px;
+        }
+
+
+
+        .timeline .column .description p {
+            font-size: 20px;
+            line-height: 20px;
+            margin-left: 20px;
+            margin-top: 55px;
+            font-family: serif;
+        }
+
+        .timeline .column .description {
+            border-left: 1px solid rgb(15, 12, 12);
+        }
+
+        .timeline .column .title1 {
+            top: 100px;
+        }
+
+        .timeline .column .description1 {
+            border-left: 1px solid rgb(15, 12, 12);
+        }
+
+            .timeline .column .description1 p {
+                font-size: 20px;
+                line-height: 20px;
+                margin-left: 20px;
+                margin-top: 0px;
+                font-family: serif;
+                margin-top: 70px;
+            }
+
+.title h2 {
+    margin-left: -20px;
+  
+}
+
+a {
+    text-decoration: none;
+    color: #524d81;
+}
+/*=======================PHÂN TRANG===========================*/
+.pagination {
+    position: absolute;
+    left: 350px;
+    top: 10px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 12px 17px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: rgb(177, 230, 31);
+    color: rgb(224, 238, 226);
+    border-radius: 50%;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: rgb(243, 171, 39);
+    border-radius: 50%;
+}
+/*===============================DANH MỤC BÀI VIẾT======================================*/
+
+#dropdown li a {
+    color: rgb(252, 250, 248);
+}
+
+#dropdown ul {
+    color: rgb(194, 92, 92);
+}
+
+#dropdown ul {
+    display: none;
+}
+
+#dropdown li {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right:10px;
+    list-style: none;
+}
+
+#dssk {
+    background-image: url(bgdss.jpg);
+    background-repeat: round;
+    position: absolute;
+    top: 480px;
+    left: 60px;
+    border-radius: 20px;
+    background-color: rgb(38, 134, 67);
+    font-size: 20px;
+    width: 250px;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    padding-left:30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#e {
+    color: rgb(216, 183, 49);
+    text-align: left;
+    font-weight: 100;
+    font-size: 25px;
+}
+/*====================================LIÊN HỆ==========================================*/
+/** basic default styles **/
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 10%;
+	font-size: 100%;
+	font-family: "Trebuchet MS", Arial, Tahoma, sans-serif;
+	color: #333;
+	background: #fff url('images/body-bg.jpg') 0px 0px repeat;
+	padding-top: 10px;
+}
+
+a {
+	color: #4681da;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+h2 {
+	display: inline-block;
+	border-bottom: 1px solid rgb(235, 192, 192);
+	border-top: 1px solid rgb(235, 192, 192);
+	color: #574545;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 2.6em;
+	line-height: 1.8em;
+	font-weight: 500;
+	margin-left: 310px;
+}
+
+
+/** main blocks **/
+
+#container {
+	display: block;
+	font-size: 62.5%;
+	max-width: 750px;
+	margin: 0 auto;
+	border: 1px solid;
+	margin-top: 5px;
+	margin-bottom: 66px;
+	padding: 20px 15px;
+	background: rgb(214, 233, 212);
+	border-radius: 6px;
+	padding-right: 80px;
+}
+
+
+/** the form elements **/
+
+.box-lienhe > #ttw-form {
+	box-sizing: border-box;
+}
+
+section#aligned > div.box {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dedede;
+    margin-bottom: 20px;
+    font-size: 1.55em;
+    padding: 11px 25px;
+    padding-left: 55px;
+    width: 90%;
+    color: #777;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+    top: 60px;
+    margin-left: 60px;
+}
+
+section#aligned > div.box-item:focus {
+    color: #333;
+    border-color: rgba(41, 92, 161, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+    outline: 0 none;
+}
+
+.box-lienhe #ttw-form input#name {
+	background: #fff url('images/user.png') 5px 4px no-repeat;
+}
+
+.box-lienhe #ttw-form input#email {
+	background: #fff url('images/email.png') 5px 4px no-repeat;
+}
+
+.box-lienhe #ttw-form input#website {
+	background: #fff url('images/website.png') 5px 4px no-repeat;
+}
+
+.box-lienhe #ttw-form input#telephone {
+	background: #fff url('images/phone.png') 5px 4px no-repeat;
+}
+
+	.box-lienhe #ttw-form textarea.txtblock {
+		background: #fff url('images/speech.png') 5px 4px no-repeat;
+	}
+
+.box-lienhe #ttw-form #slider {
+	width: 60%;
+}
+
+.box-lienhe #ttw-form #aligned {
+	box-sizing: border-box;
+	float: left;
+	width: 450px;
+	margin-right: 50px;
+}
+
+.box-lienhe #ttw-form #aside {
+	float: left;
+	width: 250px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*them volh*/
+section#aligned > div#prioritycase {
+    position: relative;
+    top: -40px;
+    left: 100px;
+}
+
+#wrapping {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+span.radiobadge {
+	display: block;
+	margin-bottom: 8px;
+}
+
+	span.radiobadge label {
+		font-size: 1.2em;
+		padding-bottom: 4px;
+	}
+
+select.selmenu {
+	font-size: 17px;
+	color: #676767;
+	padding: 9px !important;
+	border: 1px solid #aaa;
+	width: 200px;
+}
+
+
+/** custom buttons **/
+
+#buttons {
+	display: block;
+	padding-top: 10px;
+}
+
+	#buttons #resetbtn {
+		display: block;
+		float: left;
+		color: #515151;
+		height: 3em;
+		padding: 0 1em;
+		outline: 0;
+		font-weight: bold;
+		font-size: 1.3em;
+		white-space: nowrap;
+		word-wrap: normal;
+	}
+
+	#buttons #submitbtn {
+		display: block;
+		float: left;
+		height: 3em;
+		padding: 0 1em;
+		border: 1px solid;
+		outline: 0;
+		font-weight: bold;
+		font-size: 1.3em;
+		color: #fff;
+		text-shadow: 0px 1px 0px #222;
+		border-radius: 2px;
+		background-image: -webkit-linear-gradient(top, rgb(226, 238, 175) 3%, rgb(188, 216, 77) 3%, rgb(144, 176, 38) 100%);
+	}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		padding: 10px 15px;
+	}
+
+	#container {
+		width: 100%;
+	}
+
+	#ttw-form #aligned {
+		width: 100%;
+		float: none;
+		display: block;
+	}
+
+	#ttw-form #aside {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+
+	#ttw-form .txtinput,
+	#ttw-form textarea {
+		width: 85%;
+	}
+
+	#prioritycase {
+		float: left;
+		display: block;
+		margin-top:50px;
+	}
+
+	#recipientcase {
+		float: left;
+		display: block;
+		margin-right: 55px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#ttw-form .txtinput,
+	#ttw-form textarea {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	body {
+		padding: 10px 0px;
+	}
+
+	select.selmenu {
+		width: 190px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	body {
+		padding: 10px 0px;
+	}
+
+	#ttw-form .txtinput,
+	#ttw-form textarea {
+		width: 70%;
+	}
+
+	#ttw-form #aligned {
+		overflow: hidden;
+	}
+
+	select.selmenu {
+		width: 160px;
+	}
+
+	#recipientcase {
+		margin-right: 30px;
+	}
+}
+
+.noidung-lienhe {
+	width: 750px;
+	height: 300px;
+	padding-left: 110px;
+	padding-top: 30px;
+}
+
+#prioritycase {
+	font-size: 15px;
+	position: relative;
+	left: 420px;
+	bottom: 470px;
+	line-height: 40px;
+}
+.box-lienhe {
+	width: 400px; /*ứng vs màng hình đt nhỏ nhất*/
+	margin: auto; /*cho thẻ div vào giữa*/
+	border-radius: 6px;
+	padding: 12px;
+	border: 1px solid rgb(223, 215, 215);
+	box-shadow: 0 5px 10px rgb(192, 191, 191); /*x y độ loe*/
+	margin-top: 10px;
+	position: relative;
+	right:120px;
+}
+.box-lienhe input{
+	
+	border: 1px solid rgb(223, 215, 215);
+    width: 100%;
+    padding: 20px;/*kích thước đc cộng ra ngoài*/
+    box-sizing: border-box;/*kích thước thẻ không thay đổi => giải quyết thêm padding*/
+    border-radius: 6px;
+}
+	#prioritycase {
+		margin-top: 170px;
+	}
+.box-lienhe > #buttons {
+	border: 1px solid rgb(223, 215, 215);
+	width: 100%;
+	padding: 20px; /*kích thước đc cộng ra ngoài*/
+	box-sizing: border-box; /*kích thước thẻ không thay đổi => giải quyết thêm padding*/
+	border-radius: 6px;
+}
+/*============================*/
+.text-box {
+	line-height: 25px;
+	padding-left: 90px;
+}
+
+/*-----------anh chay phan tin tuc khuyen mai---------*/
+.slideshow-container2 {
+	text-align: center;
+}
+
+.slideshow-container2 img {
+    width: 440px;
+    height: 275px;
+    position:relative;
+   
+}
+/*====================GIỎ HÀNG=========================
+.popup-container {
+    
+    position: relative;
+    top: 50px;
+    left: 900px;
+    
+}
+
+.popup-container>.popup {
+    width: 1000px;
+    height: 600px;
+    background-color: rgb(253, 253, 245);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 5px 10px rgb(192, 191, 191);/*x y độ loe
+
+}
+
+.GHang tr th {
+    width: 100px;
+    height: 40px;
+    border: 1px solid;
+}
+.popup {
+    position: relative;
+    right: 900px;
+}
+
+.title{
+    color: #1877f2;
+    font-size: 22pt;
+    text-align: center;
+    margin-top: 40px;
+}
+.box{
+    width: 320px;/*ứng vs màng hình đt nhỏ nhất*
+    margin: auto;/*cho thẻ div vào giữa
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid rgb(223, 215, 215);
+    box-shadow: 0 5px 10px rgb(192, 191, 191);/*x y độ loe*
+    margin-top: 10px;
+    position: relative;
+    left: 300px;
+}
+.box-item{
+    margin-top:0px ;
+}
+.box-item input{
+    border: 1px solid rgb(223, 215, 215);
+    width: 100%;
+    padding: 15px;/*kích thước đc cộng ra ngoài*
+    box-sizing: border-box;/*kích thước thẻ không thay đổi => giải quyết thêm padding*
+    border-radius: 6px;
+}
+/*.box-item button{
+    border: 1px solid rgb(184, 179, 179);
+    width: 100%;
+    padding: 15px;/*kích thước đc cộng ra ngoài*
+    box-sizing: border-box;/*kích thước thẻ không thay đổi => giải quyết thêm padding*
+    border-radius: 6px;
+    background-color: #1877f2;
+    color: white;
+    font-weight: bold;/*in đậm chữ*
+    font-size: 16px;
+    cursor: pointer;/*con trỏ chuột hình bàn tay*
+}*/
+/*selecter ảo*
+.box > .box-item :first-child{ /*con đầu tiên*
+        margin-bottom: 20px;
+}
+.box > .box-item :last-child{/*con cuối*
+    margin-bottom: 20px;
+}
+.bgSanPham > .slideshow-container img {
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top: 442px;
+    left: 500px;
+}
+
+/*Chitiet tintuc*/
+.adv{
+    /*margin:auto;
+    height: 500px;
+    */
+    width: 800px;
+    margin-left: 500px;
+}
+
+/*Giỏ hàng 2*/
+
+
+
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control {
+        width: 20%;
+        display: inline !important;
+    }
+
+    .actions .btn {
+        width: 36%;
+        margin: 1.5em 0;
+    }
+
+    .actions .btn-info {
+        float: left;
+    }
+
+    .actions .btn-danger {
+        float: right;
+    }
+
+    table#cart thead {
+        display: none;
+    }
+
+    table#cart tbody td {
+        display: block;
+        padding: .6rem;
+        min-width: 320px;
+    }
+
+    table#cart tbody tr td:first-child {
+        background: #333;
+        color: #fff;
+    }
+
+    table#cart tbody td:before {
+        content: attr(data-th);
+        font-weight: bold;
+        display: inline-block;
+        width: 5rem;
+    }
+
+    table#cart tfoot td {
+        display: block;
+    }
+
+        table#cart tfoot td .btn {
+            display: block;
+        }
+}
+
+
+/*thong tin dat hang*/
+.box{
+  
+    width: 320px;/*ứng vs màng hình đt nhỏ nhất*/
+    margin: auto;/*cho thẻ div vào giữa*/
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid rgb(223, 215, 215);
+    box-shadow: 0 5px 10px rgb(192, 191, 191);/*x y độ loe*/
+  margin-left: 500px;
+}
+.box-item{
+    margin-top:0px ;
+}
+.box-item input{
+    border: 1px solid rgb(223, 215, 215);
+    width: 100%;
+    padding: 15px;/*kích thước đc cộng ra ngoài*/
+    box-sizing: border-box;/*kích thước thẻ không thay đổi => giải quyết thêm padding*/
+    border-radius: 6px;
+}
+.box-item button{
+    border: 1px solid rgb(184, 179, 179);
+    width: 100%;
+    padding: 15px;/*kích thước đc cộng ra ngoài*/
+    box-sizing: border-box;/*kích thước thẻ không thay đổi => giải quyết thêm padding*/
+    border-radius: 6px;
+    background-color: #1877f2;
+    color: white;
+    font-weight: bold;/*in đậm chữ*/
+    font-size: 16px;
+    cursor: pointer;/*con trỏ chuột hình bàn tay*/
+}
+/*selecter ảo*/
+.box > .box-item :first-child{ /*con đầu tiên*/
+        margin-bottom: 20px;
+}
+.box > .box-item :last-child{/*con cuối*/
+    margin-bottom: 20px;
+}
+/**GioHangLum*/
+
+/* Global settings */
+ 
+.product-image {
+  float: left;
+  width: 20%;
+}
+ 
+.product-details {
+  float: left;
+  width: 37%;
+}
+ 
+.product-price {
+  float: left;
+  width: 12%;
+}
+ 
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+ 
+.product-removal {
+  float: left;
+  width: 9%;
+}
+ 
+.product-line-price {
+  float: left;
+  width: 12%;
+  text-align: right;
+}
+ 
+/* This is used as the traditional .clearfix class */
+.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: '';
+  display: table;
+}
+ 
+.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+  clear: both;
+}
+ 
+.group, .shopping-cart, .column-labels, .product, .totals-item {
+  zoom: 1;
+}
+ 
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+  content: '$';
+}
+ 
+/* Body/Header stuff */
+body {
+  padding: 0px 30px 30px 20px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+ 
+h1 {
+  font-weight: 100;
+}
+ 
+label {
+  color: #aaa;
+}
+ 
+.shopping-cart {
+  margin-top: -45px;
+}
+ 
+/* Column headers */
+.column-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+  text-indent: -9999px;
+}
+ 
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product .product-image {
+  text-align: center;
+}
+.product .product-image img {
+  width: 100px;
+}
+.product .product-details .product-title {
+  margin-right: 20px;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+.product .remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+  font-size: 12px;
+  border-radius: 3px;
+}
+.product .remove-product:hover {
+  background-color: #a44;
+}
+ 
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+.totals .totals-item .totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+.totals .totals-item-total {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+ 
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+ 
+.checkout:hover {
+  background-color: #494;
+}
+ 
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+ 
+  .column-labels {
+    display: none;
+  }
+ 
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+ 
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+ 
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+ 
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+ 
+  .product-quantity:before {
+    content: 'x';
+  }
+ 
+  .product-removal {
+    width: auto;
+  }
+ 
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+ 
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+ 
+  .product .product-line-price:before {
+    content: 'Item Total: $';
+  }
+ 
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
+}

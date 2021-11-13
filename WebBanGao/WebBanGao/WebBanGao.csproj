@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E39E2C19-6476-4310-95D5-841EE1208AF0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebBanGao</RootNamespace>
+    <AssemblyName>WebBanGao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22451, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WEBBANGAO\WebBanGao\WebBanGao\bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\404Error.aspx" />
+    <Content Include="Pages\ChitietKhuyenmai.aspx" />
+    <Content Include="Pages\ChiTietSP.aspx" />
+    <Content Include="Pages\ChiTietTinTuc.aspx" />
+    <Content Include="Pages\QuanLyTinTuc.aspx" />
+    <Content Include="QLbangao.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLbangao.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LayoutSP.Master" />
+    <Content Include="Layout.Master" />
+    <Content Include="LayoutTinTuc.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\GioHang.aspx" />
+    <Content Include="Pages\GioiThieu.aspx" />
+    <Content Include="Pages\index.aspx" />
+    <Content Include="Pages\KhuyenMai.aspx" />
+    <Content Include="Pages\LienHe.aspx" />
+    <Content Include="Pages\SanPham.aspx" />
+    <Content Include="Pages\TinTuc.aspx" />
+    <Content Include="Resource\Images\a1.jpg" />
+    <Content Include="Resource\Images\a10.png" />
+    <Content Include="Resource\Images\a11.jpg" />
+    <Content Include="Resource\Images\a2.jpg" />
+    <Content Include="Resource\Images\a3.jpg" />
+    <Content Include="Resource\Images\a4.jpg" />
+    <Content Include="Resource\Images\a5.jpg" />
+    <Content Include="Resource\Images\a6.jpg" />
+    <Content Include="Resource\Images\a7.png" />
+    <Content Include="Resource\Images\a8.jpg" />
+    <Content Include="Resource\Images\a9.jpg" />
+    <Content Include="Resource\Images\anh.jpg" />
+    <Content Include="Resource\Images\bgSanPham.jpg" />
+    <Content Include="Resource\Images\bgSanPham2.jpg" />
+    <Content Include="Resource\Images\footerbg.jpg" />
+    <Content Include="Resource\Images\Gaohamchau.jpg" />
+    <Content Include="Resource\Images\gao_mongchim.jpg" />
+    <Content Include="Resource\Images\gh1.jpg" />
+    <Content Include="Resource\Images\Gạo 404.jpg" />
+    <Content Include="Resource\Images\Gạo 504.jpg" />
+    <Content Include="Resource\Images\Gạo 64.jpg" />
+    <Content Include="Resource\Images\Gạo Hàm Châu.jpg" />
+    <Content Include="Resource\Images\Gạo Jasmine.jpeg" />
+    <Content Include="Resource\Images\Gạo móng chim.png" />
+    <Content Include="Resource\Images\Gạo nếp cái hoa vàng.jpg" />
+    <Content Include="Resource\Images\Gạo nếp nương.jpg" />
+    <Content Include="Resource\Images\Gạo ST25.jpg" />
+    <Content Include="Resource\Images\gạo thơm lài.png" />
+    <Content Include="Resource\Images\Gạo tám Hải Hậu.jpg" />
+    <Content Include="Resource\Images\Gạo Tám Đài Loan.jpg" />
+    <Content Include="Resource\Images\Gạo tám đỏ Thái Lan.jpg" />
+    <Content Include="Resource\Images\Gạo xi dẻo.jpeg" />
+    <Content Include="Resource\Images\imgbg.jpg" />
+    <Content Include="Resource\Images\incon-Email.png" />
+    <Content Include="Resource\Images\incon-Website.png" />
+    <Content Include="Resource\Images\incon-điênthoai.jpeg" />
+    <Content Include="Resource\Images\incon-Địa chỉ.png" />
+    <Content Include="Resource\Images\km.jpg" />
+    <Content Include="Resource\Images\km1.jpg" />
+    <Content Include="Resource\Images\kmtin3.jpg" />
+    <Content Include="Resource\Images\l1.png" />
+    <Content Include="Resource\Images\lienhe.jpg" />
+    <Content Include="Resource\Images\lienhe1.jpg" />
+    <Content Include="Resource\Images\logo.jpg" />
+    <Content Include="Resource\Images\nong san%281%29.jpg" />
+    <Content Include="Resource\Images\nong san%282%29.jpg" />
+    <Content Include="Resource\Images\nong san%283%29.jpg" />
+    <Content Include="Resource\Images\nong san%284%29.jpg" />
+    <Content Include="Resource\Images\nong san%285%29.jpg" />
+    <Content Include="Resource\Images\nong san%286%29.jpg" />
+    <Content Include="Resource\Images\timkiem.jpg" />
+    <Content Include="Resource\Images\tin1-1.jpeg" />
+    <Content Include="Resource\Images\tin1-2.jpeg" />
+    <Content Include="Resource\Images\tin1-3.jpeg" />
+    <Content Include="Resource\Images\tin1.jpeg" />
+    <Content Include="Resource\Images\Tin2-1.jpg" />
+    <Content Include="Resource\Images\tin2-2.jpg" />
+    <Content Include="Resource\Images\TIN2.jpg" />
+    <Content Include="Resource\Images\Tin3-1.jpg" />
+    <Content Include="Resource\Images\Tin3-2.jpg" />
+    <Content Include="Resource\Images\Tin3-3.jpg" />
+    <Content Include="Resource\Images\Tin3-4.jpg" />
+    <Content Include="Resource\Images\Tin4-1.jpg" />
+    <Content Include="Resource\Images\TIN5.jpg" />
+    <Content Include="Resource\Images\TIN6.jpg" />
+    <Content Include="Resource\Images\tinkm2.jpg" />
+    <Content Include="Resource\Images\TTIN3.jpeg" />
+    <Content Include="Resource\Source\jsbanner.js" />
+    <Content Include="Resource\Source\style.css" />
+    <Content Include="Resource\Source\tintuc.js" />
+    <Content Include="ThemKM.aspx" />
+    <Content Include="TTintucthem.aspx" />
+    <Content Include="userUI\CTKhuyenMai.ascx" />
+    <Content Include="userUI\ThemKhuyenMai.ascx" />
+    <Content Include="userUI\TTinTuc.ascx" />
+    <Content Include="userUI\ChiTietSP.ascx" />
+    <Content Include="userUI\ChiTietTinTuc.ascx" />
+    <Content Include="userUI\GioHang.ascx" />
+    <Content Include="userUI\GioiThieu.ascx" />
+    <Content Include="userUI\index.ascx" />
+    <Content Include="userUI\KhuyenMai.ascx" />
+    <Content Include="userUI\LienHe.ascx" />
+    <Content Include="userUI\SanPham.ascx" />
+    <Content Include="userUI\TinTuc.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutSP.Master.cs">
+      <DependentUpon>LayoutSP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutSP.Master.designer.cs">
+      <DependentUpon>LayoutSP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutTinTuc.Master.cs">
+      <DependentUpon>LayoutTinTuc.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LayoutTinTuc.Master.designer.cs">
+      <DependentUpon>LayoutTinTuc.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\404Error.aspx.cs">
+      <DependentUpon>404Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\404Error.aspx.designer.cs">
+      <DependentUpon>404Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChitietKhuyenmai.aspx.cs">
+      <DependentUpon>ChitietKhuyenmai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChitietKhuyenmai.aspx.designer.cs">
+      <DependentUpon>ChitietKhuyenmai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChiTietSP.aspx.cs">
+      <DependentUpon>ChiTietSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChiTietSP.aspx.designer.cs">
+      <DependentUpon>ChiTietSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChiTietTinTuc.aspx.cs">
+      <DependentUpon>ChiTietTinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChiTietTinTuc.aspx.designer.cs">
+      <DependentUpon>ChiTietTinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GioiThieu.aspx.cs">
+      <DependentUpon>GioiThieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\GioiThieu.aspx.designer.cs">
+      <DependentUpon>GioiThieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KhuyenMai.aspx.cs">
+      <DependentUpon>KhuyenMai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\KhuyenMai.aspx.designer.cs">
+      <DependentUpon>KhuyenMai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LienHe.aspx.designer.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuanLyTinTuc.aspx.cs">
+      <DependentUpon>QuanLyTinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\QuanLyTinTuc.aspx.designer.cs">
+      <DependentUpon>QuanLyTinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SanPham.aspx.designer.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TinTuc.aspx.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TinTuc.aspx.designer.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLbangao.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLbangao.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKM.aspx.cs">
+      <DependentUpon>ThemKM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThemKM.aspx.designer.cs">
+      <DependentUpon>ThemKM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTintucthem.aspx.cs">
+      <DependentUpon>TTintucthem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTintucthem.aspx.designer.cs">
+      <DependentUpon>TTintucthem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\CTKhuyenMai.ascx.cs">
+      <DependentUpon>CTKhuyenMai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\CTKhuyenMai.ascx.designer.cs">
+      <DependentUpon>CTKhuyenMai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\ThemKhuyenMai.ascx.cs">
+      <DependentUpon>ThemKhuyenMai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\ThemKhuyenMai.ascx.designer.cs">
+      <DependentUpon>ThemKhuyenMai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\TTinTuc.ascx.cs">
+      <DependentUpon>TTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\TTinTuc.ascx.designer.cs">
+      <DependentUpon>TTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\ChiTietSP.ascx.cs">
+      <DependentUpon>ChiTietSP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\ChiTietSP.ascx.designer.cs">
+      <DependentUpon>ChiTietSP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\ChiTietTinTuc.ascx.cs">
+      <DependentUpon>ChiTietTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\ChiTietTinTuc.ascx.designer.cs">
+      <DependentUpon>ChiTietTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\GioHang.ascx.designer.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\GioiThieu.ascx.cs">
+      <DependentUpon>GioiThieu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\GioiThieu.ascx.designer.cs">
+      <DependentUpon>GioiThieu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\index.ascx.cs">
+      <DependentUpon>index.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\index.ascx.designer.cs">
+      <DependentUpon>index.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\KhuyenMai.ascx.cs">
+      <DependentUpon>KhuyenMai.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\KhuyenMai.ascx.designer.cs">
+      <DependentUpon>KhuyenMai.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\LienHe.ascx.cs">
+      <DependentUpon>LienHe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\LienHe.ascx.designer.cs">
+      <DependentUpon>LienHe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\SanPham.ascx.cs">
+      <DependentUpon>SanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\SanPham.ascx.designer.cs">
+      <DependentUpon>SanPham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userUI\TinTuc.ascx.cs">
+      <DependentUpon>TinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userUI\TinTuc.ascx.designer.cs">
+      <DependentUpon>TinTuc.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QLbangao.dbml.layout">
+      <DependentUpon>QLbangao.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12793</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1505/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
